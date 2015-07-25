@@ -1,2 +1,5 @@
-<h1>Cao indekse</h1>
 
+<% @workouts.each do |workout| %>
+ <h2><%= link_to workout.date, workout %></h2>
+ <h3><%= workout.workout %></h3>
+<% end %>
