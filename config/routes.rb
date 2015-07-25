@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
-  
-  get 'pages/index'
 
-  get 'pages/about'
-
-  get 'pages/galery'
-
-  get 'pages/contact'
-
-  resources :workouts
-  root "workouts#index"
+  resources :workouts do
+    resources :exercises
+  end
+   root "workouts#index"
 end
