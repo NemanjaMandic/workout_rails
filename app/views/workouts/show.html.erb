@@ -5,4 +5,6 @@
     <p><%= @workout.length %></p>
 </div>
 
-<%= link_to "Vrati se", root_path %>
+<%= link_to "Vrati se", root_path %> |
+<%= link_to "Izmeni", edit_workout_path(@workout) %> |
+<%= link_to "Obrisi", workout_path(@workout), method: :delete, data: { confirm: "Jesi siguran?" } %>
